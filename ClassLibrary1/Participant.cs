@@ -9,26 +9,16 @@ namespace BoVoyage.DAL
         class Participant:Personne
         {
             public int Id { get; set; }
-            public int VoyageId { get; set; }
-            public int AgeMin { get; set; }
-            public int AgeMax { get; set; }
-            public int NombreClientFavorable { get; set; }
+            public int IdReservation { get; set; }
+     
+            public int NumeroUnique { get; set; }
 
-            public List<int> ClientIds { get; set; }
-
-            public void Telephoner(List<Client> Clients)
+            public List<int> personneIds { get; set; }
+  
+            public bool Reductiont()
             {
-                Console.Clear();
-                Console.WriteLine("Liste des numéros de téléphone de clients à téléphoner :  ");
-                foreach (var Client in Clients)
-                {
-                    Console.WriteLine(Client.Telephone);
-                }
-
-                Console.WriteLine("Le campagne a été effectué par téléphone avec succès ");
+            return (GetAge() < 12);
             }
-
-
-        }
+    }
     
 }
