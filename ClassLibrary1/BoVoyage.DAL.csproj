@@ -43,9 +43,10 @@
     <Compile Include="AgenceVoyage.cs" />
     <Compile Include="Destination.cs" />
     <Compile Include="DestinationDonnees.cs" />
-    <Compile Include="DossierVoyage.cs" />
+    <Compile Include="DossierReservation.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="DossierVoyageDonnee.cs" />
+    <Compile Include="ParticipantReservation.cs" />
     <Compile Include="Personne.cs" />
     <Compile Include="Participant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

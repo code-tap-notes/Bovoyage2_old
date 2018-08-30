@@ -8,8 +8,9 @@ namespace BoVoyage.DAL
 {
     class Client: Personne 
     {
+        public int Id { get; set; }
         public string email { get; set; }
-        public int[] IdReservations { get; set; }
+        public virtual Reservations reservation { get; set; }
 
     }
 }

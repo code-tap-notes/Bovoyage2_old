@@ -16,7 +16,8 @@ namespace BoVoyage.DAL
             public string Adresse { get; set; }
             public string Telephone { get; set; }
             public DateTime DateNaissance { get; set; }
-            public int[] DossierVoyageIds { get; set; }
+         
+
         public int GetAge()
             {
                 return DateTime.Today.Year - DateNaissance.Year; ;

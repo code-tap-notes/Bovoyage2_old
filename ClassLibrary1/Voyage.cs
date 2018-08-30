@@ -8,15 +8,21 @@ namespace BoVoyage.DAL
 {
    class Voyage
    {
-            public int Id { get; set; }
-            public int DestinationId { get; set; }
+            public int Id { get; set; }     
             public DateTime DateAller { get; set; }
             public DateTime DateRetour { get; set; }
-            public int NombreVoygeur { get; set; }
-            public int[] CampagneIds { get; set; }
+            public int PlacesDisponible { get; set; }
+            public double PrixParPersonne { get; set; }
 
-            public double PrixUnitaire { get; set; }
-   }
+            public void Reserver(int places)
+            { this.Reserver()
+             }
+                       // [Foreingkey("IdDestination")]
+            public virtual Destination destination{ get; set; }
+                      //  [Foreingkey("IdDestination")]
+            public virtual AgenceVoyage agenceVoyage { get; set; }
+
+    }
    
 }
 

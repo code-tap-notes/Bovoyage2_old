@@ -8,13 +8,9 @@ namespace BoVoyage.DAL
     {
         class Participant:Personne
         {
-            public int Id { get; set; }
-            public int IdReservation { get; set; }
-     
+            public int Id { get; set; } 
             public int NumeroUnique { get; set; }
 
-            public List<int> personneIds { get; set; }
-  
             public bool Reductiont()
             {
             return (GetAge() < 12);

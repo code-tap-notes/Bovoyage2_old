@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace BoVoyage.DAL
 {
-        class DossierVoyage
+        class DossierReservation
         {
             public int Id { get; set; }
             public EtatDossierReservation EtatDossier { get; set; }
             public string NumeroCarteBancaire { get; set; }
             public double prixParPersonne { get; set; }
-            public int IdClient { get; set; }
+        //FK 
+            public virtual AgenceVoyage agenceVoyage { get; set; }
+
             public int IdVoyage { get; set; }
 
             public double CaculerPrixTotal()
