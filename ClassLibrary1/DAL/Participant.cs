@@ -8,7 +8,6 @@ namespace BoVoyage.DAL
     {
         class Participant:Personne
         {
-            public int Id { get; set; } 
             public int NumeroUnique { get; set; }
 
             public bool Reductiont()

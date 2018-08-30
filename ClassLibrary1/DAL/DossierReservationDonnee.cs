@@ -54,10 +54,10 @@ namespace BoVoyage.DAL
 
                         var Voyage = new Voyage();
                         Voyage.Id = int.Parse(champs[0]);
-                        Voyage.DestinationId = int.Parse(champs[1]);
+                        Voyage.Destination.Id = int.Parse(champs[1]);
                         Voyage.DateAller = DateTime.Parse(champs[2]);
                         Voyage.DateRetour = DateTime.Parse(champs[3]);
-                        Voyage.NombreVoygeur = int.Parse(champs[4]);
+                        Voyage.PlacesDisponible = int.Parse(champs[4]);
 
                         Voyages.Add(Voyage);
                     }
@@ -72,10 +72,10 @@ namespace BoVoyage.DAL
                     contenuFichier.AppendLine(string.Join(
                                                 SeparateurChamps.ToString(),
                                                 Voyage.Id,
-                                                Voyage.DestinationId,
+                                                Voyage.Destination.Id,
                                                 Voyage.DateAller,
                                                 Voyage.DateRetour,
-                                                Voyage.NombreVoygeur));
+                                                Voyage.PlacesDisponible));
                 }
 
                 File.WriteAllText(CheminFichier, contenuFichier.ToString());

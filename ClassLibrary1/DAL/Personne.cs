@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BoVoyage.DAL
 {
-    class Personne
+    public abstract class Personne
     {
         
             public int Id { get; set; }
@@ -24,6 +24,6 @@ namespace BoVoyage.DAL
             }
 
     }
-    enum Civil { Mr, Mme, Mlle }
+    public enum Civil { Mr, Mme, Mlle }
 }
 
